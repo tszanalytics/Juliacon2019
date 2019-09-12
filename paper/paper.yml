@@ -1,4 +1,4 @@
-title: "Probabilistic Biostatistics: Adventures with Julia from Code to Clinic"
+title: "Probabilistic Biostatistics with Julia"
 keywords:
   - Julia
   - Bayesian methods
@@ -11,12 +11,10 @@ authors:
     affiliation: 1
   - name: Jeffrey R. Strawn
     affiliation: 1, 2
-  - name: 3rd author
-    affiliation: 2
 affiliations:
   - name: University of Cincinnati
     index: 1
   - name: Cincinnati Children's Hospital
     index: 2
-date: 6 July 2019
+date: 9 September 2019
 bibliography: ref.bib
