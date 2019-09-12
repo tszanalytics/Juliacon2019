@@ -79,7 +79,13 @@ In previous work\cite{Strawn2018,Mills2019}, data from a federally-funded NIH tr
 % insert pars_difference_sequential.png
 % pars_difference_sequential.png
 \vskip 6pt
-The following example sequentially analyzes the data for the combined treatment SRT+CBT relative to PBO using Bayesian updating.  To evaluate the hypothesis in (\ref{eq:hoh1}) where $\mu_1$ is the ATE of SRT+CBT and $\mu_2$ is the ATE of PBO. Starting with a sample of 12 (8 treated, 4 placebo), the posterior density was updated with each additional 6 observations (4 treated:2 placebo).  The sequence of posteriors as $n$ is increased for the difference in ATE between SRT+CBT and PBO is shown in Figure~\ref{fig:pars_diff}, and the PDR giving posterior odds against the null hypothesis (\ref{eq:odds}), posterior probability that the difference is greater than zero (\ref{eq:pval}), and two sided $p$-value ($\approx 2\times p(\delta \ge 0)$) are given in Table \ref{tab:seq}.
+The following example sequentially analyzes the data for the combined treatment SRT+CBT relative to PBO using Bayesian updating.  To evaluate the hypothesis in (\ref{eq:hoh1}) where $\mu_1$ is the ATE of SRT+CBT and $\mu_2$ is the ATE of PBO. Starting with a sample of 12 (8 treated, 4 placebo), the posterior density was updated with each additional 6 observations (4 treated:2 placebo).  The sequence of posteriors as $n$ is increased for the difference in ATE between SRT+CBT and PBO is shown in Figure~\ref{fig:pars_diff}, and the PDR giving posterior odds against the null hypothesis (\ref{eq:odds}), posterior probability that the difference is greater than zero (\ref{eq:pval}), and two sided $p$-value ($\approx 2\times p(\delta \ge 0)$) are given in Table \ref{tab:seq
+\begin{figure}[t]
+	\centerline{\includegraphics[width=8cm]{sequential_plot.pdf}}
+	\caption{Difference in ATE between treatment and placebo groups.} 
+	\label{fig:pars_diff}
+\end{figure}
+
 \begin{table}
 	\tbl{Evidence Against $H_0$:$\delta=0$}{
 		\begin{tabular}{rrrr} %\hline
@@ -98,12 +104,6 @@ The following example sequentially analyzes the data for the combined treatment 
 	\end{tabular}}
 	\label{tab:seq}
 \end{table}
-
-\begin{figure}[t]
-	\centerline{\includegraphics[width=8cm]{sequential_plot.pdf}}
-	\caption{Difference in ATE between treatment and placebo groups.} 
-	\label{fig:pars_diff}
-\end{figure}
 
 There is clear evidence of a difference between SRT+CBT and PBO, $\delta$, by $n=72$ (posterior odds against $H_0$:$\delta=0.0$ are $61.4$:$1$, $P(\delta \ge 0|s,n) = 0.0025$,), suggesting that for this treatment comparison the clinical trial could have been completed with less than half of the original sample with no change in the conclusions.
 
